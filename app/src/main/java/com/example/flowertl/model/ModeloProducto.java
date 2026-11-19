@@ -1,4 +1,4 @@
-package com.example.flowertl.model;
+package com.example.flowertl.Model;
 
 import android.content.ContentValues;
 import android.content.Context;

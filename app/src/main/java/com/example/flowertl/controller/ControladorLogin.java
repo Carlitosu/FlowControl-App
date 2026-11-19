@@ -1,7 +1,7 @@
-package com.example.flowertl.controller;
+package com.example.flowertl.Controller;
 
 import android.content.Context;
-import com.example.flowertl.model.ModeloUsuario;
+import com.example.flowertl.Model.ModeloUsuario;
 import com.example.flowertl.Config.Configuracion;
 import com.example.flowertl.Empty.eUsuario;
 

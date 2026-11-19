@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Flowertl">
         <activity
-            android:name=".view.ActividadLogin"
+            android:name=".View.ActividadLogin"
             android:exported="true"
             android:theme="@style/Theme.Flowertl"
             android:windowSoftInputMode="adjustResize">
@@ -21,13 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ActividadMenu" />
-        <activity android:name=".view.ActividadRegistrarProducto" />
-        <activity android:name=".view.ActividadRegistrarCliente" />
-        <activity android:name=".view.ActividadCarrito" />
-        <activity android:name=".view.ActividadPerfilUsuario" />
-        <activity android:name=".view.ActividadRegistrarUsuario" />
-        <activity android:name=".view.ActividadAcercaDe" />
+        <activity android:name=".View.ActividadMenu" />
+        <activity android:name=".View.ActividadRegistrarProducto" />
+        <activity android:name=".View.ActividadRegistrarCliente" />
+        <activity android:name=".View.ActividadCarrito" />
+        <activity android:name=".View.ActividadPerfilUsuario" />
+        <activity android:name=".View.ActividadRegistrarUsuario" />
+        <activity android:name=".View.ActividadAcercaDe" />
     </application>
 
 </manifest>

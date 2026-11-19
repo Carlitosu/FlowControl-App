@@ -1,4 +1,4 @@
-package com.example.flowertl.view;
+package com.example.flowertl.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.flowertl.R;
-import com.example.flowertl.controller.ControladorLogin;
+import com.example.flowertl.Controller.ControladorLogin;
 
 public class ActividadMenu extends AppCompatActivity {
     LinearLayout btnRegProducto, btnRegCliente, btnCarrito, btnPerfil, btnRegUsuario, btnAcercaDe;

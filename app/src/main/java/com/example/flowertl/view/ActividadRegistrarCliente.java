@@ -1,11 +1,11 @@
-package com.example.flowertl.view;
+package com.example.flowertl.View;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.flowertl.R;
-import com.example.flowertl.controller.ControladorLogin;
+import com.example.flowertl.Controller.ControladorLogin;
 
 public class ActividadRegistrarCliente extends AppCompatActivity {
     Button btnRegresar, btnCerrarSesion;
