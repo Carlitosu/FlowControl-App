@@ -1,6 +1,7 @@
 package com.example.flowertl.Config;
 
 import com.example.flowertl.Empty.eCliente;
+import com.example.flowertl.Empty.ePedido;
 import com.example.flowertl.Empty.eProducto;
 import com.example.flowertl.Empty.eUsuario;
 import java.util.List;
@@ -36,4 +37,24 @@ public interface ServicioApi {
     @FormUrlEncoded
     @POST("Customer/insertCustomer")
     Call<RespuestaApi<IdRegistro>> registrarCliente(@FieldMap Map<String, String> campos);
+
+    @FormUrlEncoded
+    @POST("Pedido/getPedidos")
+    Call<RespuestaApi<List<ePedido>>> obtenerPedidos(@FieldMap Map<String, String> campos);
+
+    @FormUrlEncoded
+    @POST("Pedido/getPedidoById")
+    Call<RespuestaApi<ePedido>> obtenerPedidoPorId(@FieldMap Map<String, String> campos);
+
+    @FormUrlEncoded
+    @POST("Pedido/insertPedido")
+    Call<RespuestaApi<IdRegistro>> registrarPedido(@FieldMap Map<String, String> campos);
+
+    @FormUrlEncoded
+    @POST("Pedido/updateEstado")
+    Call<RespuestaApi<Void>> actualizarEstadoPedido(@FieldMap Map<String, String> campos);
+
+    @FormUrlEncoded
+    @POST("Pedido/deletePedido")
+    Call<RespuestaApi<Void>> eliminarPedido(@FieldMap Map<String, String> campos);
 }

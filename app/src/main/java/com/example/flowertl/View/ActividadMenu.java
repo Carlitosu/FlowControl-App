@@ -31,7 +31,7 @@ public class ActividadMenu extends AppCompatActivity {
 
         btnRegProducto.setOnClickListener(v -> startActivity(new Intent(this, ActividadRegistrarProducto.class)));
         btnRegCliente.setOnClickListener(v -> startActivity(new Intent(this, ActividadRegistrarCliente.class)));
-        btnCarrito.setOnClickListener(v -> startActivity(new Intent(this, ActividadCarrito.class)));
+        btnCarrito.setOnClickListener(v -> startActivity(new Intent(this, ActividadPedidos.class)));
         btnPerfil.setOnClickListener(v -> startActivity(new Intent(this, ActividadPerfilUsuario.class)));
         btnRegUsuario.setOnClickListener(v -> startActivity(new Intent(this, ActividadRegistrarUsuario.class)));
         btnAcercaDe.setOnClickListener(v -> startActivity(new Intent(this, ActividadAcercaDe.class)));

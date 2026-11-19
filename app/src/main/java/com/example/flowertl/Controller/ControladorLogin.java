@@ -36,6 +36,10 @@ public class ControladorLogin {
         return configuracion.obtenerPreferencia("rol");
     }
 
+    public String obtenerNombreUsuarioLogueado() {
+        return configuracion.obtenerPreferencia("nombreUsuario");
+    }
+
     public void cerrarSesion() {
         configuracion.limpiar();
     }

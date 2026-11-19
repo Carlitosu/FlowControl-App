@@ -27,7 +27,7 @@
         <activity android:name=".View.ActividadMenu" />
         <activity android:name=".View.ActividadRegistrarProducto" />
         <activity android:name=".View.ActividadRegistrarCliente" />
-        <activity android:name=".View.ActividadCarrito" />
+        <activity android:name=".View.ActividadPedidos" />
         <activity android:name=".View.ActividadPerfilUsuario" />
         <activity android:name=".View.ActividadRegistrarUsuario" />
         <activity android:name=".View.ActividadAcercaDe" />

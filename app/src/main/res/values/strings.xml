@@ -14,7 +14,7 @@
     <string name="subtitulo_menu">Seleccione una opción para continuar</string>
     <string name="menu_reg_producto">Registrar\nProducto</string>
     <string name="menu_reg_cliente">Registrar\nClientes</string>
-    <string name="menu_carrito">Carrito de\nCompra</string>
+    <string name="menu_carrito">Gestión de\nPedidos</string>
     <string name="menu_perfil">Perfil de\nUsuario</string>
     <string name="menu_reg_usuario">Registrar\nUsuario</string>
     <string name="menu_acerca_de">Acerca\nde...</string>
@@ -23,7 +23,7 @@
     <!-- Títulos de Pantallas -->
     <string name="titulo_reg_producto">✿ Registrar Producto</string>
     <string name="titulo_reg_cliente">✿ Registrar Cliente</string>
-    <string name="titulo_carrito">✿ Carrito de Compras</string>
+    <string name="titulo_pedidos">✿ Pedidos</string>
     <string name="titulo_perfil">✿ Perfil de Usuario</string>
     <string name="titulo_reg_usuario">✿ Registrar Nuevo Usuario</string>
     <string name="titulo_acerca_de">✿ Acerca de Flower TL</string>
@@ -49,7 +49,22 @@
         <item>Vendedor</item>
     </string-array>
     <string name="btn_regresar">REGRESAR AL MENÚ</string>
-    <string name="carrito_vacio">Tu carrito está vacío</string>
+    <string name="pedidos_vacios">No hay pedidos registrados</string>
+    <string name="opcion_ver_detalle">Ver detalle</string>
+    <string name="opcion_cambiar_estado">Cambiar estado</string>
+    <string name="opcion_eliminar">Eliminar</string>
+    <string name="titulo_detalle_pedido">Detalle del pedido</string>
+    <string name="titulo_eliminar_pedido">Eliminar pedido</string>
+    <string name="mensaje_eliminar_pedido">¿Seguro que desea eliminar este pedido? El stock de los productos se devolverá.</string>
+    <string name="btn_eliminar">ELIMINAR</string>
+    <string name="btn_cancelar">CANCELAR</string>
+    <string name="btn_cerrar">CERRAR</string>
+    <string-array name="estados_pedido">
+        <item>Pendiente</item>
+        <item>En proceso</item>
+        <item>Entregado</item>
+        <item>Cancelado</item>
+    </string-array>
     <string name="total_pagar">TOTAL A PAGAR:</string>
     <string name="total_cero">L. 0.00</string>
 
