@@ -35,6 +35,19 @@
     <string name="hint_precio">Precio</string>
     <string name="hint_nombre_completo">Nombre Completo</string>
     <string name="hint_identidad">Identidad / DNI</string>
+    <string name="hint_categoria">Categoría</string>
+    <string name="hint_existencias">Existencias</string>
+    <string name="hint_descripcion">Descripción</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_direccion">Dirección</string>
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="hint_rol">Rol</string>
+    <string name="info_usuario">Configuración de Nueva Cuenta</string>
+    <string name="btn_guardar">GUARDAR</string>
+    <string-array name="roles_usuario">
+        <item>Administrador</item>
+        <item>Vendedor</item>
+    </string-array>
     <string name="btn_regresar">REGRESAR AL MENÚ</string>
     <string name="carrito_vacio">Tu carrito está vacío</string>
     <string name="total_pagar">TOTAL A PAGAR:</string>
