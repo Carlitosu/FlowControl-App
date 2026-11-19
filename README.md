@@ -1,18 +1,12 @@
-# 🌸 FlowControl App
+# FlowControl App
 
 **Sistema de gestión móvil para ventas e inventarios de _flowers_lt_** — florería y detalles personalizados.
 
 Aplicación Android en **Java** con arquitectura **MVC**, conectada a una **API REST en PHP** que guarda la información en **MySQL**. Proyecto de la materia Programación Móvil II (III Parcial), Universidad Tecnológica de Honduras, Campus Santa Bárbara.
 
-![Android](https://img.shields.io/badge/Android-API%2024%2B-3DDC84?logo=android&logoColor=white)
-![Java](https://img.shields.io/badge/Java-11-ED8B00?logo=openjdk&logoColor=white)
-![Retrofit](https://img.shields.io/badge/Retrofit-2.11-48B983)
-![PHP](https://img.shields.io/badge/PHP-8-777BB4?logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)
-
 ---
 
-## 📸 Capturas
+## Capturas
 
 <table>
   <tr>
@@ -27,30 +21,19 @@ Aplicación Android en **Java** con arquitectura **MVC**, conectada a una **API 
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-**Ya implementadas**
-
-- 🔐 **Inicio de sesión** contra la base de datos MySQL a través de la API. La sesión queda guardada en el dispositivo.
-- 🧭 **Menú principal** con acceso a todas las pantallas.
-- 🌷 **Registro de productos**: nombre, categoría, precio, existencias y descripción.
-- 👥 **Registro de clientes**: nombre, identidad, teléfono y dirección. La identidad no puede repetirse.
-- 🧑‍💼 **Registro de usuarios**: usuario, contraseña, nombre completo, correo y rol (Administrador o Vendedor).
-- 🪪 **Perfil de usuario** con los datos de la sesión activa.
-- ⚠️ **Mensajes de validación** y de error del servidor en cada formulario.
-
-**Pendientes (según la propuesta del proyecto)**
-
-- 🛒 Módulo de pedidos (crear, consultar, editar y eliminar) y carrito de compra.
-- 🔎 Catálogo de arreglos con búsqueda por categoría (fúnebres, amor, cumpleaños, personalizados).
-- 🧩 Roles con permisos distintos y registro de cuentas por parte del cliente.
-- 📦 Control de inventario con cantidad mínima y alertas.
-- 📅 Consultas de ventas y pedidos por fecha (diaria, semanal, mensual).
-- 🖼️ Imágenes y opciones de personalización en el catálogo (dedicatorias, envoltura, chocolates).
+- **Inicio de sesión** contra la base de datos MySQL a través de la API. La sesión queda guardada en el dispositivo.
+- **Menú principal** con acceso a todas las pantallas.
+- **Registro de productos**: nombre, categoría, precio, existencias y descripción.
+- **Registro de clientes**: nombre, identidad, teléfono y dirección. La identidad no puede repetirse.
+- **Registro de usuarios**: usuario, contraseña, nombre completo, correo y rol (Administrador o Vendedor).
+- **Perfil de usuario** con los datos de la sesión activa.
+- **Mensajes de validación** y de error del servidor en cada formulario.
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 ┌───────────────────────────── App Android (MVC) ─────────────────────────────┐
@@ -76,7 +59,7 @@ Cada respuesta de la API tiene el mismo formato:
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 | Capa | Tecnología |
 |---|---|
@@ -88,7 +71,7 @@ Cada respuesta de la API tiene el mismo formato:
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```
 FlowControl-App/
@@ -113,7 +96,7 @@ FlowControl-App/
 
 ---
 
-## 🔌 Endpoints de la API
+## Endpoints de la API
 
 Todas las rutas son **POST** y reciben `username` y `password` (credenciales de la aplicación) en cada llamada.
 
@@ -135,7 +118,7 @@ curl -X POST http://localhost/FlowControlAPI/User/login \
 
 ---
 
-## 🚀 Instalación y uso
+## Instalación y uso
 
 ### Requisitos
 
@@ -174,35 +157,18 @@ adb reverse tcp:8080 tcp:80
 
 ---
 
-## 🔑 Credenciales de prueba
+## Credenciales de prueba
 
 | Uso | Usuario | Contraseña |
 |---|---|---|
 | Usuario de la app (login) | `admin` | `admin123` |
 | Credencial de la API (`username` / `password`) | `FlowControlApp` | `flowcontrol123` |
 
-> ⚠️ Estas credenciales son solo para desarrollo. Antes de un despliegue real hay que cambiarlas, guardar las contraseñas con hash y no incluir credenciales dentro de la aplicación.
+> Estas credenciales son solo para desarrollo. Antes de un despliegue real hay que cambiarlas, guardar las contraseñas con hash y no incluir credenciales dentro de la aplicación.
 
 ---
 
-## 🧾 Historial del proyecto
-
-| # | Commit |
-|---|---|
-| 1 | Versión inicial: app Android con SQLite (Móvil I) |
-| 2 | Renombrar carpetas y paquetes a mayúscula inicial |
-| 3 | Agregar backend FlowControlAPI (PHP + MySQL) |
-| 4 | Agregar capa de red con Retrofit y permisos de internet |
-| 5 | Conectar modelos y login a la API y eliminar SQLite |
-| 6 | Agregar formulario de registro de productos |
-| 7 | Agregar formulario de registro de clientes |
-| 8 | Agregar formulario de registro de usuarios |
-| 9 | Configurar URL de la API para pruebas con celular por USB |
-| 10 | Documentar el proyecto (README y capturas) |
-
----
-
-## 👥 Equipo
+## Equipo
 
 Grupo #3 — Universidad Tecnológica de Honduras, Campus Santa Bárbara, Facultad de Ingeniería, 2026.
 
@@ -210,4 +176,3 @@ Grupo #3 — Universidad Tecnológica de Honduras, Campus Santa Bárbara, Facult
 - Carlos Chávez
 - Gustavo Reyes
 - Lurvin Ramos
-- Marlon Zaldívar
