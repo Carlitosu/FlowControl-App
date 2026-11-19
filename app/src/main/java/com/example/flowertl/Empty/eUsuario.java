@@ -3,6 +3,7 @@ package com.example.flowertl.Empty;
 public class eUsuario {
     private int id;
     private String nombreUsuario;
+    private String nombreCompleto;
     private String contrasena;
     private String rol; // Administrador, Cliente, Usuario
     private String correo;
@@ -22,6 +23,9 @@ public class eUsuario {
 
     public String obtenerNombreUsuario() { return nombreUsuario; }
     public void establecerNombreUsuario(String nombreUsuario) { this.nombreUsuario = nombreUsuario; }
+
+    public String obtenerNombreCompleto() { return nombreCompleto; }
+    public void establecerNombreCompleto(String nombreCompleto) { this.nombreCompleto = nombreCompleto; }
 
     public String obtenerContrasena() { return contrasena; }
     public void establecerContrasena(String contrasena) { this.contrasena = contrasena; }
