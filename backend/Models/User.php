@@ -23,6 +23,11 @@
             return $this->db->fetch($sql, $params);
         }
 
+        function getIdByNombreUsuario($nombreUsuario) {
+            $fila = $this->db->fetch("SELECT Id FROM User WHERE UserName = :nombreUsuario", [":nombreUsuario" => $nombreUsuario]);
+            return $fila ? $fila->Id : null;
+        }
+
         function existeNombreUsuario($nombreUsuario) {
             $sql = "SELECT Id FROM User WHERE UserName = :nombreUsuario";
             return $this->db->fetch($sql, [":nombreUsuario" => $nombreUsuario]) !== false;

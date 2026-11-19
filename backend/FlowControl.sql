@@ -58,3 +58,26 @@ VALUES ('admin', 'admin123', 'Administrador', 'admin@flowers.lt', 1);
 -- Credencial de la app Android: usuario FlowControlApp / contrasena flowcontrol123
 INSERT INTO API (UserName, Password, Description)
 VALUES ('FlowControlApp', MD5('flowcontrol123'), 'Aplicacion Android FlowControl');
+
+-- Pedidos (cabecera y detalle)
+CREATE TABLE Pedido (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Customer_Id INT NOT NULL,
+    User_Id INT,
+    Fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    Total DECIMAL(10,2) NOT NULL DEFAULT 0,
+    Estado VARCHAR(20) NOT NULL DEFAULT 'Pendiente',
+    FOREIGN KEY (Customer_Id) REFERENCES Customer(Id),
+    FOREIGN KEY (User_Id) REFERENCES `User`(Id)
+);
+
+CREATE TABLE DetallePedido (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Pedido_Id INT NOT NULL,
+    Product_Id INT NOT NULL,
+    Cantidad INT NOT NULL,
+    PrecioUnitario DECIMAL(10,2) NOT NULL,
+    Subtotal DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (Pedido_Id) REFERENCES Pedido(Id) ON DELETE CASCADE,
+    FOREIGN KEY (Product_Id) REFERENCES Product(Id)
+);
