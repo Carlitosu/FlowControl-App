@@ -1,29 +1,35 @@
 package com.example.flowertl.Controller;
 
 import android.content.Context;
-import com.example.flowertl.Model.ModeloUsuario;
 import com.example.flowertl.Config.Configuracion;
+import com.example.flowertl.Config.RespuestaCallback;
 import com.example.flowertl.Empty.eUsuario;
+import com.example.flowertl.Model.ModeloUsuario;
 
 public class ControladorLogin {
     private ModeloUsuario modeloUsuario;
     private Configuracion configuracion;
 
     public ControladorLogin(Context contexto) {
-        modeloUsuario = new ModeloUsuario(contexto);
+        modeloUsuario = new ModeloUsuario();
         configuracion = new Configuracion("SesionUsuario", contexto);
     }
 
-    public boolean autenticar(String nombreUsuario, String contrasena) {
-        if (modeloUsuario.iniciarSesion(nombreUsuario, contrasena)) {
-            eUsuario usuario = modeloUsuario.obtenerUsuarioPorNombre(nombreUsuario);
-            if (usuario != null) {
+    // La respuesta llega de forma asincrona desde la API
+    public void autenticar(String nombreUsuario, String contrasena, RespuestaCallback<eUsuario> callback) {
+        modeloUsuario.iniciarSesion(nombreUsuario, contrasena, new RespuestaCallback<eUsuario>() {
+            @Override
+            public void onExito(eUsuario usuario) {
                 configuracion.establecerPreferencia("nombreUsuario", usuario.obtenerNombreUsuario());
                 configuracion.establecerPreferencia("rol", usuario.obtenerRol());
-                return true;
+                callback.onExito(usuario);
             }
-        }
-        return false;
+
+            @Override
+            public void onError(String mensaje) {
+                callback.onError(mensaje);
+            }
+        });
     }
 
     public String obtenerRolUsuarioLogueado() {

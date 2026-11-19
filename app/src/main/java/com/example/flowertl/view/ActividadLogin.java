@@ -7,7 +7,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.flowertl.R;
+import com.example.flowertl.Config.RespuestaCallback;
 import com.example.flowertl.Controller.ControladorLogin;
+import com.example.flowertl.Empty.eUsuario;
 
 public class ActividadLogin extends AppCompatActivity {
     EditText txtNombreUsuario, txtContrasena;
@@ -31,12 +33,21 @@ public class ActividadLogin extends AppCompatActivity {
 
             if (usuario.isEmpty() || clave.isEmpty()) {
                 Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
-            } else if (controladorLogin.autenticar(usuario, clave)) {
-                Intent intent = new Intent(this, ActividadMenu.class);
-                startActivity(intent);
-                finish();
             } else {
-                Toast.makeText(this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                btnIniciarSesion.setEnabled(false);
+                controladorLogin.autenticar(usuario, clave, new RespuestaCallback<eUsuario>() {
+                    @Override
+                    public void onExito(eUsuario resultado) {
+                        startActivity(new Intent(ActividadLogin.this, ActividadMenu.class));
+                        finish();
+                    }
+
+                    @Override
+                    public void onError(String mensaje) {
+                        btnIniciarSesion.setEnabled(true);
+                        Toast.makeText(ActividadLogin.this, mensaje, Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
