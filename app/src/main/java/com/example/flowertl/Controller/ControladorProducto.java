@@ -4,6 +4,7 @@ import com.example.flowertl.Config.IdRegistro;
 import com.example.flowertl.Config.RespuestaCallback;
 import com.example.flowertl.Empty.eProducto;
 import com.example.flowertl.Model.ModeloProducto;
+import java.util.List;
 
 public class ControladorProducto {
     private ModeloProducto modeloProducto = new ModeloProducto();
@@ -32,5 +33,9 @@ public class ControladorProducto {
         }
 
         modeloProducto.insertar(new eProducto(0, nombre, categoria, precio, existencias, descripcion), callback);
+    }
+
+    public void listarProductos(RespuestaCallback<List<eProducto>> callback) {
+        modeloProducto.obtenerTodos(callback);
     }
 }

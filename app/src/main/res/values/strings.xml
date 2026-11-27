@@ -74,4 +74,5 @@
     <string name="lista_integrantes">• Angie Pineda\n• Carlos Chávez\n• Gustavo Reyes\n• Lurvin Ramos\n• Marlon Zaldivar</string>
     <string name="detalle_universidad">UTH Campus Santa Bárbara\nFacultad de Ingeniería\n2026</string>
     <string name="btn_volver_menu">VOLVER AL MENÚ</string>
+    <string name="nuevo_pedido">Nuevo pedido</string>
 </resources>

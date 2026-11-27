@@ -45,6 +45,8 @@ public class ActividadPedidos extends AppCompatActivity {
         rvPedidos.setAdapter(adaptador);
 
         btnRegresar.setOnClickListener(v -> finish());
+        findViewById(R.id.btnNuevoPedido).setOnClickListener(v ->
+            new FormularioPedido(this, controladorLogin, controladorPedido, this::cargarPedidos).abrir());
 
         btnCerrarSesion.setOnClickListener(v -> {
             controladorLogin.cerrarSesion();

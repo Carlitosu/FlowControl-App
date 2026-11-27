@@ -4,6 +4,7 @@ import com.example.flowertl.Config.IdRegistro;
 import com.example.flowertl.Config.RespuestaCallback;
 import com.example.flowertl.Empty.eCliente;
 import com.example.flowertl.Model.ModeloCliente;
+import java.util.List;
 
 public class ControladorCliente {
     private ModeloCliente modeloCliente = new ModeloCliente();
@@ -16,5 +17,9 @@ public class ControladorCliente {
         }
 
         modeloCliente.insertar(new eCliente(0, nombre, identidad, telefono, direccion), callback);
+    }
+
+    public void listarClientes(RespuestaCallback<List<eCliente>> callback) {
+        modeloCliente.obtenerTodos(callback);
     }
 }

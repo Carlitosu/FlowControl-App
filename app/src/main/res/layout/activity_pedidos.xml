@@ -66,6 +66,13 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNuevoPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nuevo_pedido"
+            app:backgroundTint="@color/rosa_oscuro" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegresar"
             android:layout_width="match_parent"
             android:layout_height="55dp"
